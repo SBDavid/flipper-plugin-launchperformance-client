@@ -1,8 +1,8 @@
 {
   "$schema": "https://fbflipper.com/schemas/plugin-package/v2.json",
-  "name": "flipper-plugin-launchperformance",
-  "id": "LaunchPerformance",
-  "version": "0.91.1",
+  "name": "flipper-plugin-launchperformance-log",
+  "id": "LaunchPerformanceLog",
+  "version": "1.0",
   "pluginType": "client",
   "main": "dist/bundle.js",
   "flipperBundlerEntry": "src/index.tsx",
@@ -11,7 +11,7 @@
     "flipper-plugin"
   ],
   "icon": "apps",
-  "title": "Launch Performance",
+  "title": "Launch Performance Log",
   "scripts": {
     "lint": "flipper-pkg lint",
     "prepack": "flipper-pkg lint && flipper-pkg bundle",

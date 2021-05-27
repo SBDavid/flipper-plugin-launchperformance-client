@@ -18,6 +18,7 @@ export declare type PerformanceLogEntry = {
   readonly startTime: number;
   readonly duration: number;
   readonly detail?: any;
+  readonly isBase: boolean;
 };
 
 type Events = {
@@ -40,19 +41,29 @@ function createColumnConfig(): DataTableColumn<PerformanceLogEntry>[] {
       width: 400,
     },
     {
-      key: 'startTime',
-      title: 'StartTime',
-      width: 100,
-      onRender: (row) => {
-        const date = new Date();
-        date.setTime(row.startTime);
-        return `${_fix(date.getHours(), 2)}:${_fix(date.getMinutes(), 2)}:${_fix(date.getSeconds(), 2)}.${_fix(date.getMilliseconds(), 3)}`;
-      }
+      key: 'isBase',
+      title: 'isBase',
+      width: 50,
     },
+    // {
+    //   key: 'startTime',
+    //   title: 'StartTime',
+    //   width: 100,
+    //   onRender: (row) => {
+    //     const date = new Date();
+    //     date.setTime(row.startTime);
+    //     return `${_fix(date.getHours(), 2)}:${_fix(date.getMinutes(), 2)}:${_fix(date.getSeconds(), 2)}.${_fix(date.getMilliseconds(), 3)}`;
+    //   }
+    // },
     {
       key: 'duration',
       title: 'Duration',
       width: 50,
+    },
+    {
+      key: 'startTime',
+      title: 'StartTime',
+      width: 150,
     },
   ];
 }
